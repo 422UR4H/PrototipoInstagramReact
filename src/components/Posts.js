@@ -7,7 +7,8 @@ const posts = [
         urlContentImg: "assets/img/gato-telefone.svg",
         altContentImg: "gato-telefone",
         urlLikeImg: "assets/img/respondeai.svg",
-        textLike: "respondeai"
+        textLike: "respondeai",
+        amountLike: 101523
     },
     {
         text: "barked",
@@ -15,15 +16,17 @@ const posts = [
         urlContentImg: "assets/img/dog.svg",
         altContentImg: "dog",
         urlLikeImg: "assets/img/adorable_animals.svg",
-        textLike: "adorable_animals"
+        textLike: "adorable_animals",
+        amountLike: 99159
     },
     {
-        text: "barked",
-        urlUserImg: "assets/img/barked.svg",
+        text: "meowed",
+        urlUserImg: "assets/img/meowed.svg",
         urlContentImg: "assets/img/dog.svg",
         altContentImg: "dog",
         urlLikeImg: "assets/img/adorable_animals.svg",
-        textLike: "adorable_animals"
+        textLike: "adorable_animals",
+        amountLike: 99159
     }
 ];
 
@@ -38,6 +41,7 @@ export default function Posts() {
                     altContentImg={post.altContentImg}
                     urlLikeImg={post.urlLikeImg}
                     textLike={post.textLike}
+                    amountLike={post.amountLike}
                 />
             )))}
         </div>
