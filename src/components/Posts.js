@@ -2,6 +2,7 @@ import Post from './Post';
 
 const posts = [
     {
+        id: 0,
         text: "meowed",
         urlUserImg: "assets/img/meowed.svg",
         urlContentImg: "assets/img/gato-telefone.svg",
@@ -11,6 +12,7 @@ const posts = [
         amountLike: 101523
     },
     {
+        id: 1,
         text: "barked",
         urlUserImg: "assets/img/barked.svg",
         urlContentImg: "assets/img/dog.svg",
@@ -20,6 +22,7 @@ const posts = [
         amountLike: 99159
     },
     {
+        id: 2,
         text: "meowed",
         urlUserImg: "assets/img/meowed.svg",
         urlContentImg: "assets/img/dog.svg",
@@ -32,9 +35,9 @@ const posts = [
 
 export default function Posts() {
     return (
-        <div class="posts">
+        <div className="posts">
             {posts.map((post => (
-                <Post 
+                <Post key={post.id}
                     text={post.text}
                     urlUserImg={post.urlUserImg}
                     urlContentImg={post.urlContentImg}

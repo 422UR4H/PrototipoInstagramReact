@@ -5,12 +5,16 @@ export default function User() {
     const [userIcon, setUserIcon] = useState("assets/img/catanacomics.svg");
 
     return (
-        <div class="usuario">
-            <img src={userIcon} alt="imagem de perfil" onClick={() => setUserIcon(prompt('Cole o link da imagem aqui') || userIcon)} />
-            <div class="texto">
+        <div className="usuario">
+            <img src={userIcon} alt="imagem de perfil" data-test="profile-image" onClick={() =>
+                setUserIcon(prompt('Cole o link da imagem aqui') || userIcon)
+            } />
+            <div className="texto">
                 <span>
-                    <strong>{userName}</strong>
-                    <ion-icon name="pencil" onClick={() => setUserName(prompt('Nome') || userName)}></ion-icon>
+                    <strong data-test="name">{userName}</strong>
+                    <ion-icon name="pencil" data-test="edit-name" onClick={() =>
+                        setUserName(prompt('Nome') || userName)
+                    }></ion-icon>
                 </span>
             </div>
         </div>
